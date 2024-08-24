@@ -2,7 +2,10 @@ const inputBox = document.getElementById("input-box");
 var listContainer = document.getElementById("list-container");
 function addTask() {
     if (inputBox.value === '') {
-        alert("You must write something")
+        // alert("You must write something")
+        //Changed it to display text on screen instead of alert
+       document.body.innerHTML = "<p class = 'wrong'>You must write something</p> <a href ='index.html' class ='not'>Go back</a>";
+
     } else {
         let li = document.createElement("li");
         li.innerHTML = inputBox.value;
